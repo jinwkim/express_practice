@@ -1,0 +1,18 @@
+<%- include('header'); -%>
+
+<title>Comments</title>
+</head>
+
+<body>
+
+<%- include('navbar'); -%>
+
+<h1>View All Comments Here!</h1>
+
+<ul>
+    <% for (let data of dataset) { %>
+        <li> The comment by <%= data.username %> is: "<%= data.comment %>" - <a href="/comments/<%= data.id %>">Edit</a></li>
+    <% } %>
+</ul>
+
+<%- include('footer'); -%>

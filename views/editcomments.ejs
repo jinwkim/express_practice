@@ -1,0 +1,18 @@
+<%- include('header'); -%>
+
+<title>Comments</title>
+</head>
+
+<body>
+
+<%- include('navbar'); -%>
+
+<h1>Edit Comment Here for User: <%= currobj.username %> </h1>
+
+<form action="/comments/<%= currobj.id %>?_method=PATCH" method="post">
+    <textarea name="comment" id="comment" cols="30" rows="5" placeholder="<%= currobj.comment %>"></textarea>
+    <br>
+    <button>Save</button>
+</form>
+
+<%- include('footer'); -%>
